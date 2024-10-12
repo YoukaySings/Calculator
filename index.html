@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+  <div class="p-6 bg-gray-800 rounded-lg shadow-lg max-w-md">
+    <div class="text-right mb-4">
+      <input id="display" type="text" class="text-4xl bg-gray-700 text-white p-3 rounded-md w-full text-right" disabled>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4">
+      <!-- Calculator Buttons -->
+      <button class="btn-3d bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-md" onclick="clearDisplay()">C</button>
+      <button class="btn-3d bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-md" onclick="deleteLast()">DEL</button>
+      <button class="btn-3d bg-gray-500 hover:bg-gray-400 text-white font-bold py-4 rounded-md" onclick="appendSymbol('%')">%</button>
+      <button class="btn-3d bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-md" onclick="appendSymbol('/')">/</button>
+
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('7')">7</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('8')">8</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('9')">9</button>
+      <button class="btn-3d bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-md" onclick="appendSymbol('*')">*</button>
+
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('4')">4</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('5')">5</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('6')">6</button>
+      <button class="btn-3d bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-md" onclick="appendSymbol('-')">-</button>
+
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('1')">1</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('2')">2</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('3')">3</button>
+      <button class="btn-3d bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-md" onclick="appendSymbol('+')">+</button>
+
+      <button class="btn-3d col-span-2 bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('0')">0</button>
+      <button class="btn-3d bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 rounded-md" onclick="appendSymbol('.')">.</button>
+      <button class="btn-3d bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-md" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
